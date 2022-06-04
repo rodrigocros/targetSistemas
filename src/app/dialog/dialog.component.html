@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Preencha os dados a baixo:</h1>
+<div mat-dialog-content>
+    <form [formGroup]="personList" action="">
+        <mat-form-field appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input formControlName="nome" matInput placeholder="Nome">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Telefone</mat-label>
+            <input formControlName="telefone" matInput placeholder="Telefone">
+            <mat-icon  matSuffix>phone</mat-icon>
+        </mat-form-field>
+    </form>
+</div>
+<div>
+    <div mat-dialog-actions [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close="">fechar</button>
+        <button mat-raised-button color="primary" (click)="addPerson()" >Salvar</button>
+  </div>
+</div>

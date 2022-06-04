@@ -1,0 +1,14 @@
+{
+  "List": [
+    {
+      "nome": "Rodrigo",
+      "telefone": "48991362161",
+      "id": 1
+    },
+    {
+      "nome": "teste",
+      "telefone": "88248234432",
+      "id": 2
+    }
+  ]
+}
