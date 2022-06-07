@@ -1,20 +1,25 @@
 <h1 mat-dialog-title>Preencha os dados a baixo:</h1>
-<div mat-dialog-content>
-    <form [formGroup]="personList" action="">
+<div class="height" mat-dialog-content>
+    <form #ngForm="ngForm" [formGroup]="personList" action="" (ngSubmit)="addPerson()">
         <mat-form-field appearance="outline">
             <mat-label>Nome</mat-label>
-            <input formControlName="nome" matInput placeholder="Nome">
+            <input formControlName="nome" matInput placeholder="Nome" name="nome">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Telefone</mat-label>
-            <input formControlName="telefone" matInput placeholder="Telefone">
+            <input formControlName="telefone" matInput placeholder="Telefone" class="form-control" name="telefone">
             <mat-icon  matSuffix>phone</mat-icon>
         </mat-form-field>
+        <div mat-dialog-actions [align]="'end'">
+            <button mat-raised-button color="warn" mat-dialog-close="">Fechar</button>
+            <button mat-raised-button color="primary" class="marg"  type="submit" [disabled]="!personList.valid" >Salvar</button>
+         </div>
     </form>
 </div>
-<div>
+<!-- <div>
     <div mat-dialog-actions [align]="'end'">
-        <button mat-raised-button color="warn" mat-dialog-close="">fechar</button>
-        <button mat-raised-button color="primary" (click)="addPerson()" >Salvar</button>
+        <button mat-raised-button color="warn" mat-dialog-close="">Fechar</button>
+        <button mat-raised-button color="primary" type="submit" >Salvar</button>
   </div>
-</div>
+</div> -->
+  

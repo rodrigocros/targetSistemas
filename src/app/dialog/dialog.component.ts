@@ -21,6 +21,7 @@ export class DialogComponent implements OnInit {
     });
   }
 
+
   addPerson(){
     if(this.personList.valid){
       this.api.postPerson(this.personList.value)
@@ -36,4 +37,6 @@ export class DialogComponent implements OnInit {
       })
     }
   }
+
+  
 }

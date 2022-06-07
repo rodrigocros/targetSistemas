@@ -27,10 +27,15 @@ export class AppComponent implements OnInit {
   }
 
 
+
   openDialog() {
-    this.dialog.open(DialogComponent, {
+    this.dialog.open(DialogComponent,{
       width: '40%',
-    });
+    }).afterClosed().subscribe(val => {
+      if(val === 'Salvo'){
+        this.getAllPersons();
+      }
+    })
   }
 
 
